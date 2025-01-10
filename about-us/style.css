@@ -1,0 +1,253 @@
+@font-face {
+    font-family: iransans;
+    src: url(fonts/iransans.ttf);
+}
+
+
+::-webkit-scrollbar{
+    width: 5px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: rgba(245, 245, 245, 0.247);
+    border-radius: 20px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: goldenrod;
+    border-radius: 20px;
+  }
+
+body {
+    background: url("image/image.png");
+    background-color: #212121;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    font-family: iransans;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    align-items: center;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 18px;
+    gap: 1.5rem;
+}
+
+.title h1 {
+    margin-top: 10px;
+}
+
+.title-star {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-text {
+    display: flex;
+    text-align: center;
+    line-height: 2;
+    color: whitesmoke;
+    max-width: 100ch;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+
+
+.employment-list {
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.employment-list > div {
+    width: 300px;
+    position: relative;
+    display: flex;
+    height: 250px;
+    border: 1px solid goldenrod;
+    border-bottom: none;
+    background-color: #1f2029;
+    /* background-color: gray; */
+    border-radius:10px 10px 0px 0px ;
+    margin: 2rem;
+}
+
+.employment-list img {
+    position: absolute;
+    right: 85px;
+    top: -40px;
+    border-radius: 100%;
+    border: 10px double rgba(255, 217, 0, 0.449);
+    width: 130px;
+    height: 130px;
+    box-shadow: 0px 0px 7px black;
+}
+
+
+.employment-summery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    place-items: center;
+    flex-wrap: wrap;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    z-index: 5;
+}
+
+.bottom {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 85px;
+    border: 1px solid goldenrod;
+    border-top: none;
+    border-radius:0px 0px 7px 7px ;
+    transition: 300ms;
+    width: 300px;
+    padding-top: 1rem;
+    background-color: #1f2029ab;
+    /* background-color: rgba(128, 128, 128, 0.501); */
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.bottom span {
+    opacity: 0;
+}
+
+.box:hover {
+    margin-bottom: 10rem;
+}
+
+.box:hover .bottom > span {
+    opacity: 1;
+}
+
+.box:hover .bottom {
+    /* transform: translateY(13px); */
+    position: absolute;
+    z-index: 1;
+    background-color: #1f2029ab;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    top: 190px;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.box:hover .bottom > h5 {
+    opacity: 0;
+}
+
+.contact-us-text {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+.social-media {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:  3rem 5rem;
+    transition: 500ms;
+    
+}
+
+
+.social-media a{
+    padding: 15px ;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    place-items: center;
+transition: 500ms;
+    border: 2px dashed white;
+    border-radius: 100%;
+    animation: row 10s infinite linear ;
+    animation-fill-mode: both;
+
+
+}
+.social-media svg{
+    color: white;
+    transition: 500ms;
+    
+}
+
+.social-media a:hover{
+    background-color: rgba(27, 131, 165, 0.195);
+}
+
+
+
+
+@keyframes row {
+
+    from {
+        transform: rotate(100deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+@media (width > 1455px) {
+    .box:hover {
+        margin-bottom: 2rem;
+    }
+}
+
